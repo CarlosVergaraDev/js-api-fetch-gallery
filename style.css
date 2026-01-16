@@ -1,0 +1,58 @@
+/* Base layout: centered column layout */
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #f4f7f6;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    row-gap: 2rem;
+    justify-content: center;
+    align-items: center;
+    min-height: 100%;
+}
+
+/* Main responsive grid container */
+.container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+    width: 100%;
+    max-width: 1000px;
+    justify-items: center;
+}
+
+/* Card-like blocks: targets any class starting with "api-" */
+div[class^="api-"] {
+    width: 100%;
+    aspect-ratio: 4 / 3;
+    background-color: #ffffff;
+    border-radius: 12px;
+    overflow: hidden; 
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Subtle lift interaction on hover */
+div[class^="api-"]:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading typography */
+div[class^="api-"] img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; 
+    display: block;
+}
+
+h1{
+  font-family: "Goldman", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+  color: rgb(29, 29, 29);
+}
